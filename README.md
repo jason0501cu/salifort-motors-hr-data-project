@@ -17,7 +17,6 @@ Salifort Motors’ Human Resources (HR) department collected employee-related da
 - [Modeling](#modeling)
 - [Results](#results)
 - [Key Insights](#key-insights)
-- [Future Work](#future-work)
 - [Data Source &amp; References](#data-source--references)
 
 ---
