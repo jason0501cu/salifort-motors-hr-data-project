@@ -65,6 +65,7 @@ The original dataset contains 15,000 records and 10 columns. Key variables inclu
 
 ## Project Structure
 
+<pre>
 Salifort-Motors-HR-data-project/
 ├── main/
 │   ├── Salifort-Motors-HR-data-project.ipynb   # Main Jupyter notebook with data cleaning, EDA, modeling, and analysis
@@ -74,6 +75,7 @@ Salifort-Motors-HR-data-project/
 │
 ├── executive-summary.pdf                        # One-page, high-level summary
 └── requirements.txt                             # Python dependencies
+</pre>
 
 ---
 
@@ -86,8 +88,8 @@ In the early analysis phase, the following visualizations and observations were 
 
 - Employees working on more projects generally recorded more hours per month.
 - Among those who **left**, two patterns emerged:
-  - Some worked **very few hours**, possibly already resigning or being phased out.
-  - Others worked **excessively long hours**, likely burned out and overworked.
+  1. Some worked **very few hours**, possibly already resigning or being phased out.
+  1. Others worked **excessively long hours**, likely burned out and overworked.
 - All employees who worked on **7 projects** eventually left the company.
 - The **optimal workload** seems to be handling **3 to 4 projects**, where turnover was lowest.
 - Most employees worked **well above the standard 167 monthly hours**, indicating widespread overwork, especially for those with 6-7 projects.
@@ -148,7 +150,6 @@ Additional steps included:
 
 Notes:
 Modeling without Feature Engineering is also inculded in [**Salifort-Motors-HR-data-project.ipynb**](main/Salifort-Motors-HR-data-project.ipynb).
------------------------------------------------------------------------------------------------
 
 ## Modeling
 
@@ -172,7 +173,6 @@ A brief performance summary (on the training set) appears below.
 | Gradient Boosting (CV) | 0.936     | 0.929  | 0.932     | 0.9679   | 0.9861 |
 
 Gradient Boosting Classifier slightly outperforms Random Forest by achieving a marginally higher F1‐score (0.9324 vs. 0.9317) and, more importantly, a better recall (0.9291 vs. 0.9193), meaning it catches more true leavers with only a negligible trade‐off in precision and AUC. *Since missing potential leavers is costy, Gradient Boosting Classifier is the preferred model for predicting who will leave.*
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Results
 
@@ -201,7 +201,6 @@ As Random Forest also generates pretty good scores, we will also looking into it
   5. salary
 
 Feature importance plots (stored in `results/figures/`) confirm that `tenure`, workload indicators(`number_projects` and `overworked`), and `last_evaluation` drive most of the predictive power.
--------------------------------------------------------------------------------------------------------------------------
 
 ## 🔍 Key Insights
 
