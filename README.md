@@ -29,7 +29,7 @@ To install the required Python dependencies, run:
 pip install -r requirements.txt
 ```
 
-[**Salifort-Motors-HR-data-project.ipynb**](main/Salifort-Motors-HR-data-project.ipynb) is the main Jupyter notebook for this project. You can run all the cells directly — model fitting code is commented out, and pre-trained models are automatically loaded from local files in the repository (main/models/).
+[**Salifort-Motors-HR-data-project.ipynb**](main/Salifort-Motors-HR-data-project.ipynb) is the main Jupyter notebook for this project. You can run all the cells directly as model fitting code is commented out, and pre-trained models are automatically loaded from local files in the repository (main/models/).
 
 ## Business Problem
 
@@ -89,7 +89,7 @@ In the early analysis phase, the following visualizations and observations were 
 - Employees working on more projects generally recorded more hours per month.
 - Among those who **left**, two patterns emerged:
   1. Some worked **very few hours**, possibly already resigning or being phased out.
-  1. Others worked **excessively long hours**, likely burned out and overworked.
+  2. Others worked **excessively long hours**, likely burned out and overworked.
 - All employees who worked on **7 projects** eventually left the company.
 - The **optimal workload** seems to be handling **3 to 4 projects**, where turnover was lowest.
 - Most employees worked **well above the standard 167 monthly hours**, indicating widespread overwork, especially for those with 6-7 projects.
@@ -200,16 +200,15 @@ As Random Forest also generates pretty good scores, we will also looking into it
   4. overworked
   5. salary
 
-Feature importance plots (stored in `results/figures/`) confirm that `tenure`, workload indicators(`number_projects` and `overworked`), and `last_evaluation` drive most of the predictive power.
+Feature importance plots (stored in `main/Charts/`) confirm that `tenure`, workload indicators(`number_projects` and `overworked`), and `last_evaluation` drive most of the predictive power.
 
 ## 🔍 Key Insights
 
-1. **Tenure Has a Clear Impact**Employees with very short or very long tenure show different patterns. Those with around 4 years at the company often leave after a noticeable drop in satisfaction.
-2. **Heavy Workloads Drive Turnover**Logging more than 200 hours per month significantly increases the risk of leaving. Overwork is a real issue. Better workload distribution and closer monitoring could help reduce burnout.
-3. **Effort Doesn’t Always Equal Recognition**Putting in long hours doesn’t necessarily lead to strong performance reviews. When employees feel their effort isn't acknowledged, they're more likely to leave.
-4. **Promotions Help Retain Talent**Very few employees who were promoted in the last five years ended up leaving. This shows how important growth opportunities are for keeping people engaged.
-5. **Salary Matters—Especially at the Bottom**
-   Employees in the lowest pay tier had the highest turnover. While some of this is expected in certain roles, offering clearer paths for advancement or slightly more competitive pay could help reduce unnecessary attrition.
+1. **Tenure Has a Clear Impact**: Employees with very short or very long tenure show different patterns. Those with around 4 years at the company often leave after a noticeable drop in satisfaction.
+2. **Heavy Workloads Drive Turnover**: Logging more than 200 hours per month significantly increases the risk of leaving. Overwork is a real issue. Better workload distribution and closer monitoring could help reduce burnout.
+3. **Effort Doesn’t Always Equal Recognition**: Putting in long hours doesn’t necessarily lead to strong performance reviews. When employees feel their effort isn't acknowledged, they're more likely to leave.
+4. **Promotions Help Retain Talent**: Very few employees who were promoted in the last five years ended up leaving. This shows how important growth opportunities are for keeping people engaged.
+5. **Salary Matters—Especially at the Bottom**: Employees in the lowest pay tier had the highest turnover. While some of this is expected in certain roles, offering clearer paths for advancement or slightly more competitive pay could help reduce unnecessary attrition.
 
 ---
 
